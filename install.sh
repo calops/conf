@@ -3,6 +3,13 @@
 all_targets="""
 vim
 zsh
+fonts
+git
+irssi
+pentadactyl
+tmux
+sqlite
+X
 """
 
 targets=$all_targets
@@ -11,8 +18,8 @@ if [ -z "$INSTALL_DIR" ]; then
     INSTALL_DIR=$HOME
 fi
 
-if [ ! -z "$1" ]; then
-    targets="$1"
+if [ ! -z "$@" ]; then
+    targets="$@"
 fi
 
 root=$(pwd)
@@ -22,7 +29,8 @@ for target in $targets; do
     cd $target
     for file in *; do
         echo - .${file}
-        ln -s ${file} ${INSTALL_DIR}/.${file}
+        rm -rfi ${INSTALL_DIR}/.${file}
+        ln -s ${root}/${target}/${file} ${INSTALL_DIR}/.${file}
     done
     cd $root
 done
