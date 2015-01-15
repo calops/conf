@@ -56,7 +56,10 @@ plugins=(git
          truegit
          common-aliases)
 
-export PATH="/data/homes/rlabeyri/perl5/bin:/home/rlabeyrie/.local/bin:/home/rlabeyrie/usr/sbin:/home/rlabeyrie/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/ng/bin"
+export GOPATH=/var/go
+export PATH="$HOME/.local/bin:$HOME/usr/sbin:$HOME/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/usr/lib;$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="$HOME/usr/lib/pkgconfig"
 
 source $ZSH/oh-my-zsh.sh
 
