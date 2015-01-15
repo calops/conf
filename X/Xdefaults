@@ -1,5 +1,5 @@
 x-terminal-emulator.scrollBar: off
-x-terminal-emulator.font: xft:DejaVu Sans Mono for Powerline:size=8:antialias=true
+x-terminal-emulator.font: xft:Ubuntu Mono derivative Powerline:size=9:antialias=true
 x-terminal-emulator.perl-ext-common: default,matcher
 x-terminal-emulator.letterSpace: 0
 x-terminal-emulator.matcher.button: 1
