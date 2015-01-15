@@ -22,7 +22,7 @@ for target in $targets; do
     cd $target
     for file in *; do
         echo - .${file}
-        cp -r ${file} ${INSTALL_DIR}/.${file}
+        ln -s ${file} ${INSTALL_DIR}/.${file}
     done
     cd $root
 done
