@@ -1,0 +1,30 @@
+x-terminal-emulator.scrollBar: off
+x-terminal-emulator.font: xft:Liberation Mono:size=8:antialias=true
+x-terminal-emulator.perl-ext-common: default,matcher
+x-terminal-emulator.letterSpace: -1
+x-terminal-emulator.matcher.button: 1
+x-terminal-emulator*visualBell: true
+x-terminal-emulator*saveLines: 20000
+x-terminal-emulator*scrollTtyOutput: false
+x-terminal-emulator*scrollTtyKeypress: true
+x-terminal-emulator*scrollWithBuffer: true
+
+" molokai theme
+*background: #101010
+*foreground: #d0d0d0
+*color0: #101010
+*color1: #960050
+*color2: #66aa11
+*color3: #c47f2c
+*color4: #30309b
+*color5: #7e40a5
+*color6: #3579a8
+*color7: #9999aa
+*color8: #303030
+*color9: #ff0090
+*color10: #80ff00
+*color11: #ffba68
+*color12: #5f5fee
+*color13: #bb88dd
+*color14: #4eb4fa
+*color15: #d0d0d0
