@@ -1,0 +1,102 @@
+/* xconsole  */
+xconsole*font:                  7x13bold
+xconsole*background:            black
+xconsole*foreground:            white
+xconsole*geometry:              +0-0
+
+/* ns_xm */
+Xm*font:			7x13bold
+Xm*foreground:                  white
+Xm*background:                  black
+Xm*geometry:                    600x400+0-20
+
+/* xterm */
+xterm*font:                     7x13bold
+xterm*background:               black
+xterm*foreground:               white
+xterm*saveLines:                1000
+xterm*scrollBar:                false
+xterm*metaSendsEscape:		true
+
+
+
+/* dclock */
+dclock*background:		black
+dclock*foreground:		white
+dclock*led_off:			black
+dclock*geometry:		185x50-0+0
+
+/* emacs */
+/* emacs*font:			7x13 */
+/* emacs*ReverseVideo:		on */
+
+/* aterm */
+aterm*saveLines:		500
+aterm*transparent:		true
+aterm*shading:			30
+aterm*cursorColor:		red
+aterm*scrollBar:		false
+!colors
+!blue
+aterm*color4:			#AAAAEE
+
+/* urxvt */
+urxvt.scrollBar:		off
+urxvt.font:			xft:monospace:size=6
+urxvt.perl-ext-common:		default,matcher
+urxvt.matcher.button:		1
+urxvt*color0:			Black
+urxvt*color1:			Red3
+urxvt*color2:			Green3
+urxvt*color3:			Yellow3
+urxvt*color4:			Blue3
+urxvt*color5:			Magenta3
+urxvt*color6:			Cyan3
+urxvt*color7:			AntiqueWhite
+urxvt*color8:			Grey25
+urxvt*color9:			Red
+urxvt*color10:			Green
+urxvt*color11:			Yellow
+urxvt*color12:			LightBlue4
+urxvt*color13:			Magenta
+urxvt*color14:			Cyan
+urxvt*color15:			White
+urxvt*background:		rgba:2000/2000/2000/6666
+urxvt*foreground:		White
+urxvt*visualBell:		false
+urxvt*saveLines:		2000
+urxvt*scrollTtyOutput:		false
+urxvt*scrollTtyKeypress:	true
+urxvt*scrollWithBuffer:		true
+urxvt*fading:			20
+urxvt*depth:			32
+
+x-terminal-emulator.scrollBar:			off
+x-terminal-emulator.font:			xft:monospace:size=7
+x-terminal-emulator.perl-ext-common:		default,matcher
+x-terminal-emulator.matcher.button:		1
+x-terminal-emulator*color0:			Black
+x-terminal-emulator*color1:			Red3
+x-terminal-emulator*color2:			Green3
+x-terminal-emulator*color3:			Yellow3
+x-terminal-emulator*color4:			Blue3
+x-terminal-emulator*color5:			Magenta3
+x-terminal-emulator*color6:			Cyan3
+x-terminal-emulator*color7:			AntiqueWhite
+x-terminal-emulator*color8:			Grey25
+x-terminal-emulator*color9:			Red
+x-terminal-emulator*color10:			Green
+x-terminal-emulator*color11:			Yellow
+x-terminal-emulator*color12:			LightBlue4
+x-terminal-emulator*color13:			Magenta
+x-terminal-emulator*color14:			Cyan
+x-terminal-emulator*color15:			White
+x-terminal-emulator*background:		rgba:2000/2000/2000/6666
+x-terminal-emulator*foreground:		White
+x-terminal-emulator*visualBell:		false
+x-terminal-emulator*saveLines:		2000
+x-terminal-emulator*scrollTtyOutput:		false
+x-terminal-emulator*scrollTtyKeypress:	true
+x-terminal-emulator*scrollWithBuffer:		true
+#x-terminal-emulator*fading:			20
+#x-terminal-emulator*depth:			32
