@@ -1,0 +1,256 @@
+servers = (
+  {
+    address = "irc.langochat.net";
+    chatnet = "langochat";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.geeknode.net";
+    chatnet = "geeknode";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.rezosup.org";
+    chatnet = "rezosup";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.pancake-pirates.org";
+    chatnet = "pirates";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "bitlbee";
+    chatnet = "bitlbee";
+    port = "6666";
+    autoconnect = "yes";
+  }
+);
+
+chatnets = {
+  langochat = {
+    type = "IRC";
+    autosendcmd = "/^msg nickserv identify M4A474I7S1";
+  };
+  geeknode = {
+    type = "IRC";
+    autosendcmd = "/^msg C nick identify M4A474I7S1;/^msg C chan invite #42admin";
+  };
+  rezosup = {
+    type = "IRC";
+    autosendcmd = "/^msg nickserv identify M4A474I7S1;/^msg chanserv invite #acu";
+  };
+  pirates = {
+    type = "IRC";
+    autosendcmd = "/^msg nickserv identify tructruc";
+  };
+  bitlbee = { type = "IRC"; };
+};
+
+channels = (
+  { name = "#42"; chatnet = "langochat"; autojoin = "yes"; },
+  { name = "#langochat"; chatnet = "langochat"; autojoin = "yes"; },
+  { name = "#sg"; chatnet = "langochat"; autojoin = "yes"; },
+  { name = "#42"; chatnet = "geeknode"; autojoin = "yes"; },
+  { name = "#42admin"; chatnet = "geeknode"; autojoin = "yes"; },
+  { name = "#epita"; chatnet = "rezosup"; autojoin = "yes"; },
+  { name = "#acu"; chatnet = "rezosup"; autojoin = "yes"; },
+  { name = "#pancake"; chatnet = "pirates"; autojoin = "yes"; },
+  { name = "#supinternet"; chatnet = "rezosup"; autojoin = "yes"; }
+);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  UNSET = "set -clear";
+  RESET = "set -default";
+  ns = "^msg nickserv";
+  cs = "^msg chanserv";
+  fl = "exec -o figlet -w200";
+  bsay = "^msg botserv say #42";
+  bact = "^msg botserv act #42";
+  cg = "echo 卐";
+};
+
+settings = {
+  core = {
+    real_name = "Ca Lopsfr";
+    user_name = "calopsfr";
+    nick = "calopsfr";
+    recode_out_default_charset = "UTF-8";
+    recode_fallback = "ISO-8859-15";
+    recode_transliterate = "yes";
+    recode = "yes";
+    recode_autodetect_utf8 = "yes";
+    awaylog_file = "~/.irssi/away.log";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    theme = "calops";
+    term_charset = "utf-8";
+    autolog = "yes";
+    autolog_path = "~/.irssi/logs/%Y/$tag/$0.%m-%d.log";
+  };
+  "irc/core" = { ban_type = "custom host"; };
+};
+
+
+
+hilights = (
+  { text = "calop.* -line"; nick = "yes"; word = "yes"; regexp = "yes"; },
+  { text = ".*calop.*"; nick = "no"; word = "no"; regexp = "yes"; }
+);
+
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#42";
+        tag = "langochat";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#langochat";
+        tag = "langochat";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#sg";
+        tag = "langochat";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#42";
+        tag = "geeknode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#42admin";
+        tag = "geeknode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#epita";
+        tag = "rezosup";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#acu";
+        tag = "rezosup";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pancake";
+        tag = "pirates";
+      }
+    );
+  };
+};
+
+conversions = { type = "IRC"; };
+
+logs = { };
+statusbar = {
+  default = {
+    window = {
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+        usercount = { };
+      };
+    };
+  };
+};
+ignores = ( { mask = "*anonymous*@*"; level = "ALL"; } );
