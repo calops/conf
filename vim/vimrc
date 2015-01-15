@@ -33,13 +33,14 @@ Bundle 'aklt/plantuml-syntax'
 Bundle 'wting/rust.vim'
 Bundle 'klen/python-mode'
 Bundle 'xolox/vim-misc'
-"Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-easytags'
+" colorschemes
+Bundle 'romainl/Apprentice'
 " vim-scripts bundles
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'repeat.vim'
 Bundle 'surround.vim'
-"Bundle 'taglist.vim'
 Bundle 'a.vim'
 
 filetype plugin indent on
@@ -57,19 +58,26 @@ else
     colorscheme calops-molokai
 endif
 
-" CtrlP configuration
+" CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" airline configuration
-let g:airline_powerline_fonts=1
+" airline
+let g:airline_powerline_fonts=0
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_theme='badwolf'
 let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tmuxline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
+let g:airline#extensions#tagbar#enabled = 0
+
+" tmuxline
+let g:tmuxline_powerline_separators = 0
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -86,6 +94,25 @@ nmap <F8> :TagbarToggle<CR>
 
 " bufferline
 let g:bufferline_show_bufnr = 1
+
+" pymode
+let g:pymode_options_max_line_length = 120
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_sort = ['E', 'W', 'C', 'I']
+let g:pymode_trim_whitespaces = 0
+
+" syntastic
+let g:syntastic_c_check_header = 1
+let g:syntastic_cpp_check_header = 1
+
+" project-specific conf file
+set exrc
+set secure
+
+" easytags
+let g:easytags_async = 1
+let g:easytags_syntax_keyword = 'always'
+let g:easytags_auto_highlight = 0
 
 " backup
 set backup
