@@ -1,0 +1,189 @@
+let EPITA = 1
+let mapleader=","
+
+set t_Co=256
+set background=dark
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+" Github bundles
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/ListToggle'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'chrisbra/csv.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'sjl/gundo.vim'
+Bundle 'edkolev/promptline.vim'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'rkitover/vimpager'
+Bundle 'aklt/plantuml-syntax'
+Bundle 'wting/rust.vim'
+Bundle 'klen/python-mode'
+Bundle 'xolox/vim-misc'
+"Bundle 'xolox/vim-easytags'
+" vim-scripts bundles
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'repeat.vim'
+Bundle 'surround.vim'
+"Bundle 'taglist.vim'
+Bundle 'a.vim'
+
+filetype plugin indent on
+
+if has("syntax")
+    syntax on
+endif
+if has("gui_running")
+    set guifont=Ubuntu\ Mono\ For\ Powerline\ 10
+    colorscheme desert
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+else
+    colorscheme calops-molokai
+endif
+
+" CtrlP configuration
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+" airline configuration
+let g:airline_powerline_fonts=1
+let g:airline_theme='badwolf'
+let g:airline#extensions#bufferline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+
+" gundo
+nnoremap <F5> :GundoToggle<CR>
+
+" NERD tree
+map <F2> :NERDTreeToggle<CR>
+
+" ListToggle
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" bufferline
+let g:bufferline_show_bufnr = 1
+
+" backup
+set backup
+set backupdir=~/.vimtmp/backup
+set directory=~/.vimtmp/temp
+
+silent !mkdir -p ~/.vimtmp/backup
+silent !mkdir -p ~/.vimtmp/temp
+
+if version >= 703
+    set undofile
+    set undodir=~/.vimtmp/undo
+    silent !mkdir -p ~/.vimtmp/undo
+endif
+
+" compatibility
+set nocompatible
+
+set backspace=eol,indent,start
+set showmode showcmd
+
+" editzone
+set number
+set laststatus=2
+set wildmenu
+set hidden
+set noerrorbells
+set novisualbell
+set cursorline
+if version >= 703
+    set colorcolumn+=1
+endif
+set list
+set listchars=tab:·\ ,eol:¬
+
+" encoding
+set encoding=utf-8
+if exists("g:modifiable_on")
+    set fileencoding=utf-8
+end
+
+" search
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+set gdefault
+set showmatch
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" C/C++
+au Bufnewfile,Bufread *.h set filetype=c
+au BufNewFile,BufRead *.{cpp,hh,hxx,cc,hpp} set filetype=cpp
+
+" python
+if has('syntax')
+    let python_highlight_builtins = 1
+    let python_highlight_exceptions = 1
+    let python_highlight_space_errors = 1
+endif
+
+" indentation
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set autoindent smartindent
+
+" mouse
+set mouse=a
+
+" whitespaces
+highlight ExtraWhitespace ctermbg=lightgreen
+autocmd BufNew * match ExtraWhitespace /\s\+$/
+command TrimSpaces %s/\s\+$//
+
+" viminfo
+set viminfo='20,\"50
+
+" wrapping
+set wrap
+set textwidth=0
+set colorcolumn=120
+
+" tabs
+set et
+set ts=4
+set sts=4
+set sw=4
+
+" comments format
+setlocal comments=sl:/*,mb:**,elx:*/
+
+
+" bindings
+inoremap <F1> <esc>
+vnoremap <F1> <esc>
+nnoremap <F1> <esc>
+vmap <C-c> "+y
+nnoremap ; :
