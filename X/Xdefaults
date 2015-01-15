@@ -1,13 +1,16 @@
 x-terminal-emulator.scrollBar: off
-x-terminal-emulator.font: xft:Liberation Mono:size=8:antialias=true
+x-terminal-emulator.font: xft:DejaVu Sans Mono for Powerline:size=8:antialias=true
 x-terminal-emulator.perl-ext-common: default,matcher
-x-terminal-emulator.letterSpace: -1
+x-terminal-emulator.letterSpace: 0
 x-terminal-emulator.matcher.button: 1
-x-terminal-emulator*visualBell: true
-x-terminal-emulator*saveLines: 20000
-x-terminal-emulator*scrollTtyOutput: false
-x-terminal-emulator*scrollTtyKeypress: true
-x-terminal-emulator*scrollWithBuffer: true
+x-terminal-emulator.visualBell: false
+x-terminal-emulator.saveLines: 20000
+x-terminal-emulator.scrollTtyOutput: false
+x-terminal-emulator.scrollTtyKeypress: true
+x-terminal-emulator.scrollWithBuffer: true
+x-terminal-emulator.perl-ext-common: default,matcher
+x-terminal-emulator.url-launcher: /usr/bin/firefox
+x-terminal-emulator.matcher.button: 1
 
 " molokai theme
 *background: #101010
