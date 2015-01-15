@@ -29,7 +29,7 @@ for target in $targets; do
     cd $target
     for file in *; do
         echo - .${file}
-        rm -rfi ${INSTALL_DIR}/.${file}
+        rm -rf ${INSTALL_DIR}/.${file}
         ln -s ${root}/${target}/${file} ${INSTALL_DIR}/.${file}
     done
     cd $root
