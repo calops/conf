@@ -1,0 +1,1 @@
+/home/calops/.irssi/scripts/irssinotifier.pl
