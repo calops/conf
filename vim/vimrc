@@ -6,42 +6,46 @@ set background=dark
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
+"
+call plug#begin('~/.vim/plugged')
+
 " Github bundles
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'Valloric/ListToggle'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'chrisbra/csv.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'sjl/gundo.vim'
-Bundle 'edkolev/promptline.vim'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'rkitover/vimpager'
-Bundle 'aklt/plantuml-syntax'
-Bundle 'wting/rust.vim'
-Bundle 'klen/python-mode'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
+Plug 'Valloric/ListToggle'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Lokaltog/vim-easymotion'
+Plug 'msanders/snipmate.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'chrisbra/csv.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'sjl/gundo.vim'
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'rkitover/vimpager'
+Plug 'aklt/plantuml-syntax'
+Plug 'wting/rust.vim'
+Plug 'klen/python-mode'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 " colorschemes
-Bundle 'romainl/Apprentice'
+Plug 'romainl/Apprentice'
 " vim-scripts bundles
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'repeat.vim'
-Bundle 'surround.vim'
-Bundle 'a.vim'
+Plug 'L9'
+Plug 'FuzzyFinder'
+Plug 'repeat.vim'
+Plug 'surround.vim'
+Plug 'a.vim'
+
+call plug#end()
 
 filetype plugin indent on
 
