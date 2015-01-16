@@ -14,6 +14,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " Github bundles
+Plug 'junegunn/vim-easy-align'
 Plug 'Valloric/ListToggle'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
@@ -79,6 +80,9 @@ let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 0
 let g:airline#extensions#tagbar#enabled = 0
+
+" clipboard
+set clipboard+=unnamed,unnamedplus
 
 " tmuxline
 let g:tmuxline_powerline_separators = 0
