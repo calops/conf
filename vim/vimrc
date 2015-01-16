@@ -39,6 +39,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 " colorschemes
 Plug 'romainl/Apprentice'
+Plug 'freeo/vim-kalisi'
 " vim-scripts bundles
 Plug 'L9'
 Plug 'FuzzyFinder'
