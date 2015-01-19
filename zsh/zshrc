@@ -49,8 +49,8 @@ ln=4;94:\
 ex=91:\
 \
 *.txt=32:\
-*README=1;32:\
-*README.txt=1;32:\
+*.md=32:\
+*README*=1;32:\
 *TODO=32:\
 *ChangeLog=32:\
 *AUTHORS=32:\
