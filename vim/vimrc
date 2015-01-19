@@ -14,38 +14,36 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " Github bundles
-Plug 'junegunn/vim-easy-align'
-Plug 'Valloric/ListToggle'
-Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdcommenter'
+" interface
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Lokaltog/vim-easymotion'
-Plug 'msanders/snipmate.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
-Plug 'bling/vim-bufferline'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'chrisbra/csv.vim'
+Plug 'Valloric/ListToggle'
 Plug 'airblade/vim-gitgutter'
-Plug 'sjl/gundo.vim'
-Plug 'edkolev/promptline.vim'
-Plug 'edkolev/tmuxline.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'rkitover/vimpager'
-Plug 'aklt/plantuml-syntax'
-Plug 'wting/rust.vim'
-Plug 'klen/python-mode'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-" colorschemes
-Plug 'romainl/Apprentice'
-Plug 'freeo/vim-kalisi'
-" vim-scripts bundles
+Plug 'edkolev/tmuxline.vim'
+Plug 'bling/vim-airline'
+" editing
+Plug 'scrooloose/nerdcommenter'
+Plug 'sjl/gundo.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'Lokaltog/vim-easymotion'
 Plug 'L9'
 Plug 'FuzzyFinder'
 Plug 'repeat.vim'
 Plug 'surround.vim'
 Plug 'a.vim'
+" programming
+Plug 'wting/rust.vim'
+Plug 'klen/python-mode'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+" tags
+Plug 'majutsushi/tagbar'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+" colorschemes
+Plug 'romainl/Apprentice'
+Plug 'freeo/vim-kalisi'
 
 call plug#end()
 
