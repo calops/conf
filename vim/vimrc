@@ -6,11 +6,6 @@ set background=dark
 
 filetype off
 
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-
-"Bundle 'gmarik/vundle'
-"
 call plug#begin('~/.vim/plugged')
 
 " Github bundles
