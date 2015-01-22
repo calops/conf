@@ -234,3 +234,4 @@ vnoremap <F1> <esc>
 nnoremap <F1> <esc>
 vmap <C-c> "+y
 nnoremap ; :
+nnoremap <leader>l :ls<CR>:b<space>
