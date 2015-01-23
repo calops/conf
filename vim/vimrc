@@ -27,6 +27,9 @@ Plug 'FuzzyFinder'
 Plug 'repeat.vim'
 Plug 'surround.vim'
 Plug 'a.vim'
+if ! has("nvim")
+    Plug 'dahu/vimple'
+endif
 " programming
 Plug 'wting/rust.vim'
 Plug 'klen/python-mode'
