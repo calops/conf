@@ -27,6 +27,8 @@ Plug 'FuzzyFinder'
 Plug 'repeat.vim'
 Plug 'surround.vim'
 Plug 'a.vim'
+Plug 'dahu/vim-kweasy'
+Plug 'dahu/nexus'
 if ! has("nvim")
     Plug 'dahu/vimple'
 endif
