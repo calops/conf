@@ -11,6 +11,7 @@ x-terminal-emulator.scrollWithBuffer: true
 x-terminal-emulator.perl-ext-common: default,matcher
 x-terminal-emulator.url-launcher: /usr/bin/firefox
 x-terminal-emulator.matcher.button: 1
+x-terminal-emulator.intensityStyles: false
 
 " molokai theme
 *background: #101010
